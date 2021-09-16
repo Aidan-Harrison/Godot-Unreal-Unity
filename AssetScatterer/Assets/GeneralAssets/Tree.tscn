@@ -1,0 +1,106 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/GeneralAssets/WoWTree.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Materials/Dirt.tres" type="Material" id=2]
+[ext_resource path="res://Materials/SeaWeed.tres" type="Material" id=3]
+[ext_resource path="res://Materials/Bush.tres" type="Material" id=4]
+
+[sub_resource type="PlaneMesh" id=1]
+
+[sub_resource type="SphereMesh" id=2]
+material = ExtResource( 4 )
+height = 1.6
+radial_segments = 4
+rings = 4
+
+[node name="MeshInstance" type="MeshInstance"]
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="HangingLeaves" type="Spatial" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="HangingLeaves"]
+transform = Transform( -0.210249, -0.118333, -0.0603409, -0.0108715, -0.0061186, 1.16696, -0.0251227, 0.992955, -2.17017e-08, 1.40157, 3.4563, 0.328966 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="HangingLeaves"]
+transform = Transform( 0.211669, -0.0270139, 0.0597021, -0.0108715, -0.0061186, 1.16696, -0.00565363, -0.999616, -0.00875641, 1.40157, 3.4563, 0.328966 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="HangingLeaves"]
+transform = Transform( 0.0251227, -0.992955, -5.27517e-09, -0.0108715, -0.0061187, 1.16696, -0.210249, -0.118332, -0.0603409, 1.40157, 3.4563, 0.328966 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="HangingLeaves"]
+transform = Transform( -0.00808409, 0.999264, 0.00486658, -0.0108715, -0.0061187, 1.16696, 0.21159, 0.0378639, 0.0601444, 1.41112, 3.4563, 0.328966 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="HangingLeaves2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71012, -0.120322, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="HangingLeaves2"]
+transform = Transform( -0.210249, -0.118333, -0.0603409, -0.0108715, -0.0061186, 1.16696, -0.0251227, 0.992955, -2.17017e-08, 1.40157, 3.4563, 0.328966 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="HangingLeaves2"]
+transform = Transform( 0.211669, -0.0270139, 0.0597021, -0.0108715, -0.0061186, 1.16696, -0.00565363, -0.999616, -0.00875641, 1.40157, 3.4563, 0.328966 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="HangingLeaves2"]
+transform = Transform( 0.0251227, -0.992955, -5.27517e-09, -0.0108715, -0.0061187, 1.16696, -0.210249, -0.118332, -0.0603409, 1.40157, 3.4563, 0.328966 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="HangingLeaves2"]
+transform = Transform( -0.00808409, 0.999264, 0.00486658, -0.0108715, -0.0061187, 1.16696, 0.21159, 0.0378639, 0.0601444, 1.41112, 3.4563, 0.328966 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="HangingLeaves3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62802, -0.366337, 0.989556 )
+
+[node name="MeshInstance" type="MeshInstance" parent="HangingLeaves3"]
+transform = Transform( -0.210249, -0.118333, -0.0603409, -0.0108715, -0.0061186, 1.16696, -0.0251227, 0.992955, -2.17017e-08, 1.40157, 3.4563, 0.328966 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="HangingLeaves3"]
+transform = Transform( 0.211669, -0.0270139, 0.0597021, -0.0108715, -0.0061186, 1.16696, -0.00565363, -0.999616, -0.00875641, 1.40157, 3.4563, 0.328966 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="HangingLeaves3"]
+transform = Transform( 0.0251227, -0.992955, -5.27517e-09, -0.0108715, -0.0061187, 1.16696, -0.210249, -0.118332, -0.0603409, 1.40157, 3.4563, 0.328966 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="HangingLeaves3"]
+transform = Transform( -0.00808409, 0.999264, 0.00486658, -0.0108715, -0.0061187, 1.16696, 0.21159, 0.0378639, 0.0601444, 1.41112, 3.4563, 0.328966 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1.74952, 0, 0, 0, -0.686047, -0.727557, 0, 0.727557, -0.686047, 1.92222, 4.69469, 0.519446 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 1.18952, 0, 0, 0, 0.90826, -0.418406, 0, 0.418406, 0.90826, 1.92222, 4.65883, -0.223337 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( 0.926914, 0.57016, -0.260218, -0.557139, 0.253889, -0.846267, -0.495366, 0.781318, 0.464886, 1.00683, 4.24166, -1.66043 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+transform = Transform( 0.909034, 0.00691682, 0.126535, 0.139805, 0.250549, -0.723516, -0.0563676, 0.732967, 0.246124, -1.18061, 4.23193, 1.72185 )
+mesh = SubResource( 2 )
+material/0 = null

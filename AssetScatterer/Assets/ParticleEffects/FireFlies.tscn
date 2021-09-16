@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Materials/Firefly.tres" type="Material" id=1]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.23871, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.0454545 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 1
+emission_sphere_radius = 4.0
+gravity = Vector3( 0, 0, 0 )
+scale_curve = SubResource( 2 )
+
+[sub_resource type="SphereMesh" id=4]
+material = ExtResource( 1 )
+radius = 0.05
+height = 0.1
+radial_segments = 4
+rings = 1
+
+[node name="FireFlies" type="Particles"]
+amount = 30
+speed_scale = 0.2
+fract_delta = false
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 4 )

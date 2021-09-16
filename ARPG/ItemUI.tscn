@@ -1,0 +1,575 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://ItemUI.gd" type="Script" id=1]
+[ext_resource path="res://Textures/image.psd.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.756863, 0.2, 0.2, 1 )
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.227451, 0.752941, 0.345098, 1 )
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.294118, 0.592157, 0.772549, 1 )
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.2, 0.329412, 0.352941, 0.184314 )
+corner_detail = 1
+
+[node name="ItemUI" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -137.0
+margin_top = -203.0
+margin_right = 167.0
+margin_bottom = 320.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -154.5
+margin_top = -235.92
+margin_right = 154.5
+margin_bottom = 235.08
+color = Color( 0.145098, 0.145098, 0.145098, 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ImgBackground" type="ColorRect" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -148.5
+margin_top = 31.8572
+margin_right = 149.5
+margin_bottom = 169.857
+color = Color( 0.101961, 0.101961, 0.101961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/ImgBackground"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -107.0
+margin_top = -69.0
+margin_right = 107.0
+margin_bottom = 69.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DescBackground" type="ColorRect" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -150.5
+margin_top = -80.0
+margin_right = 150.5
+margin_bottom = -3.0
+color = Color( 0.101961, 0.101961, 0.101961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect/DescBackground"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Description"
+
+[node name="ItemName" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -147.5
+margin_top = 15.0
+margin_right = 149.5
+margin_bottom = 29.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ITEM NAME"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="iLevel" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -33.8503
+margin_top = 0.837524
+margin_right = 6.14972
+margin_bottom = 14.8375
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LEVEL:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="iLevelValue" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -3.48022
+margin_top = 0.805023
+margin_right = 36.5198
+margin_bottom = 14.805
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Requirements" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -55.0278
+margin_top = 172.017
+margin_right = 53.9722
+margin_bottom = 186.017
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-REQUIREMENTS-"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StrReq" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -44.3843
+margin_top = 186.532
+margin_right = -25.3843
+margin_bottom = 200.532
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DexReq" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -10.3491
+margin_top = 186.665
+margin_right = 8.65094
+margin_bottom = 200.665
+custom_styles/normal = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IntReq" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 24.8781
+margin_top = 186.4
+margin_right = 43.8781
+margin_bottom = 200.4
+custom_styles/normal = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PrefixHeader" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.6885
+margin_top = 31.3296
+margin_right = 48.3115
+margin_bottom = 45.3296
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "== PREFIXES =="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ImplicitHeader" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -51.9915
+margin_top = -30.2194
+margin_right = 52.0085
+margin_bottom = -16.2194
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "== IMPLICITS =="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SuffixHeader" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -47.1879
+margin_top = 78.5943
+margin_right = 50.8121
+margin_bottom = 92.5943
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "== SUFFIXES =="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IStatContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.499572
+anchor_top = 0.5
+anchor_right = 0.499572
+anchor_bottom = 0.5
+margin_left = -120.519
+margin_top = -16.6249
+margin_right = 127.481
+margin_bottom = 16.3751
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stat1" type="Label" parent="ColorRect/IStatContainer"]
+margin_right = 248.0
+margin_bottom = 14.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "DEFAULT"
+align = 1
+valign = 1
+
+[node name="Stat2" type="Label" parent="ColorRect/IStatContainer"]
+margin_top = 18.0
+margin_right = 248.0
+margin_bottom = 32.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "DEFAULT"
+align = 1
+valign = 1
+
+[node name="IValueContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.55
+anchor_right = 0.5
+anchor_bottom = 0.6
+margin_left = -151.36
+margin_top = -40.114
+margin_right = -122.36
+margin_bottom = -29.664
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stat1" type="Label" parent="ColorRect/IValueContainer"]
+margin_right = 29.0
+margin_bottom = 14.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00"
+align = 1
+valign = 1
+
+[node name="Stat2" type="Label" parent="ColorRect/IValueContainer"]
+margin_top = 18.0
+margin_right = 29.0
+margin_bottom = 32.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00"
+align = 1
+valign = 1
+
+[node name="ITierContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.55
+anchor_right = 0.5
+anchor_bottom = 0.6
+margin_left = 129.185
+margin_top = -39.8344
+margin_right = 150.185
+margin_bottom = -30.3844
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stat1" type="Label" parent="ColorRect/ITierContainer"]
+margin_right = 21.0
+margin_bottom = 14.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "T1"
+align = 1
+valign = 1
+
+[node name="Stat2" type="Label" parent="ColorRect/ITierContainer"]
+margin_top = 18.0
+margin_right = 21.0
+margin_bottom = 32.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "T2"
+align = 1
+valign = 1
+
+[node name="PStatContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.499572
+anchor_top = 0.5
+anchor_right = 0.499572
+anchor_bottom = 0.5
+margin_left = -120.368
+margin_top = 44.2676
+margin_right = 127.632
+margin_bottom = 77.2676
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stat1" type="Label" parent="ColorRect/PStatContainer"]
+margin_right = 248.0
+margin_bottom = 14.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "DEFAULT"
+align = 1
+valign = 1
+
+[node name="Stat2" type="Label" parent="ColorRect/PStatContainer"]
+margin_top = 18.0
+margin_right = 248.0
+margin_bottom = 32.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "DEFAULT"
+align = 1
+valign = 1
+
+[node name="PValueContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.55
+anchor_right = 0.5
+anchor_bottom = 0.6
+margin_left = -151.5
+margin_top = 20.7176
+margin_right = -122.5
+margin_bottom = 31.1676
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stat1" type="Label" parent="ColorRect/PValueContainer"]
+margin_right = 29.0
+margin_bottom = 14.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00"
+align = 1
+valign = 1
+
+[node name="Stat2" type="Label" parent="ColorRect/PValueContainer"]
+margin_top = 18.0
+margin_right = 29.0
+margin_bottom = 32.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00"
+align = 1
+valign = 1
+
+[node name="PTierContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.55
+anchor_right = 0.5
+anchor_bottom = 0.6
+margin_left = 129.5
+margin_top = 20.95
+margin_right = 150.5
+margin_bottom = 29.4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stat1" type="Label" parent="ColorRect/PTierContainer"]
+margin_right = 21.0
+margin_bottom = 14.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "T1"
+align = 1
+valign = 1
+
+[node name="Stat2" type="Label" parent="ColorRect/PTierContainer"]
+margin_top = 18.0
+margin_right = 21.0
+margin_bottom = 32.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "T2"
+align = 1
+valign = 1
+
+[node name="SStatContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -120.5
+margin_top = 92.2676
+margin_right = 127.5
+margin_bottom = 142.268
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stat1" type="Label" parent="ColorRect/SStatContainer"]
+margin_right = 248.0
+margin_bottom = 14.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "DEFAULT"
+align = 1
+valign = 1
+
+[node name="Stat2" type="Label" parent="ColorRect/SStatContainer"]
+margin_top = 18.0
+margin_right = 248.0
+margin_bottom = 32.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "DEFAULT"
+align = 1
+valign = 1
+
+[node name="Stat3" type="Label" parent="ColorRect/SStatContainer"]
+margin_top = 36.0
+margin_right = 248.0
+margin_bottom = 50.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "DEFAULT"
+align = 1
+valign = 1
+
+[node name="SValueContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.55
+anchor_right = 0.5
+anchor_bottom = 0.6
+margin_left = -151.5
+margin_top = 67.95
+margin_right = -122.5
+margin_bottom = 97.4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stat1" type="Label" parent="ColorRect/SValueContainer"]
+margin_right = 29.0
+margin_bottom = 14.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00"
+align = 1
+valign = 1
+
+[node name="Stat2" type="Label" parent="ColorRect/SValueContainer"]
+margin_top = 18.0
+margin_right = 29.0
+margin_bottom = 32.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00"
+align = 1
+valign = 1
+
+[node name="Stat3" type="Label" parent="ColorRect/SValueContainer"]
+margin_top = 36.0
+margin_right = 29.0
+margin_bottom = 50.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00"
+align = 1
+valign = 1
+
+[node name="STierContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.55
+anchor_right = 0.5
+anchor_bottom = 0.6
+margin_left = 129.081
+margin_top = 68.5394
+margin_right = 150.081
+margin_bottom = 94.9894
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stat1" type="Label" parent="ColorRect/STierContainer"]
+margin_right = 21.0
+margin_bottom = 14.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "T1"
+align = 1
+valign = 1
+
+[node name="Stat2" type="Label" parent="ColorRect/STierContainer"]
+margin_top = 18.0
+margin_right = 21.0
+margin_bottom = 32.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "T2"
+align = 1
+valign = 1
+
+[node name="Stat3" type="Label" parent="ColorRect/STierContainer"]
+margin_top = 36.0
+margin_right = 21.0
+margin_bottom = 50.0
+custom_styles/normal = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "T2"
+align = 1
+valign = 1

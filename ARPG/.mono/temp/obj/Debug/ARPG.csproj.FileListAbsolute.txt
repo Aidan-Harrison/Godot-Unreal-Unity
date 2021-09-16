@@ -1,0 +1,8 @@
+C:\Users\aid25\Documents\GoDot\ARPG\.mono\temp\obj\Debug\ARPG.csprojAssemblyReference.cache
+C:\Users\aid25\Documents\GoDot\ARPG\.mono\temp\obj\Debug\ARPG.AssemblyInfoInputs.cache
+C:\Users\aid25\Documents\GoDot\ARPG\.mono\temp\obj\Debug\ARPG.AssemblyInfo.cs
+C:\Users\aid25\Documents\GoDot\ARPG\.mono\temp\obj\Debug\ARPG.csproj.CoreCompileInputs.cache
+C:\Users\aid25\Documents\GoDot\ARPG\.mono\temp\bin\Debug\ARPG.dll
+C:\Users\aid25\Documents\GoDot\ARPG\.mono\temp\bin\Debug\ARPG.pdb
+C:\Users\aid25\Documents\GoDot\ARPG\.mono\temp\obj\Debug\ARPG.dll
+C:\Users\aid25\Documents\GoDot\ARPG\.mono\temp\obj\Debug\ARPG.pdb

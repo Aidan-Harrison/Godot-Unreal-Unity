@@ -1,0 +1,252 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://Theme.tres" type="Theme" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.141176, 0.141176, 0.141176, 1 )
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.568627, 0.568627, 0.568627, 1 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.346923
+margin_top = -0.493943
+margin_right = -0.346924
+margin_bottom = -0.493896
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewPort" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.297363
+margin_right = 0.297363
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuBar" type="Panel" parent="."]
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 1919.0
+margin_bottom = 25.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="File" type="MenuButton" parent="MenuBar"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 2.16911
+margin_top = -10.3337
+margin_right = 83.1691
+margin_bottom = 9.66629
+custom_styles/normal = SubResource( 2 )
+text = "FILE"
+items = [ "Open File", null, 0, false, false, 0, 0, null, "", false, "Save File", null, 0, false, false, 1, 0, null, "", false, "Exit", null, 0, false, false, 2, 0, null, "", false, "NewFile", null, 0, false, false, 3, 0, null, "", false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Edit" type="MenuButton" parent="MenuBar"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 87.0997
+margin_top = -10.3337
+margin_right = 168.1
+margin_bottom = 9.66629
+custom_styles/normal = SubResource( 2 )
+text = "EDIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="MenuButton" parent="MenuBar"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 168.877
+margin_top = -10.1235
+margin_right = 249.877
+margin_bottom = 9.87651
+custom_styles/normal = SubResource( 2 )
+text = "OPTIONS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Help" type="MenuButton" parent="MenuBar"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 251.527
+margin_top = -10.1235
+margin_right = 332.527
+margin_bottom = 9.87651
+custom_styles/normal = SubResource( 2 )
+text = "HELP"
+items = [ "About", null, 0, false, false, 0, 0, null, "", false, "Help", null, 0, false, false, 1, 0, null, "", false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HideMenu" type="Button" parent="MenuBar"]
+margin_right = 15.0
+margin_bottom = 24.0
+text = "^"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="MenuBar"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -27.0
+margin_top = -12.0
+margin_bottom = 12.0
+text = "X"
+
+[node name="Minimize" type="Button" parent="MenuBar"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -53.7573
+margin_top = -11.7027
+margin_right = -26.7573
+margin_bottom = 12.2973
+text = "-"
+
+[node name="LeftPanel" type="Panel" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 0.147139
+margin_top = -515.445
+margin_right = 265.147
+margin_bottom = 539.555
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NOTEPAD" type="Button" parent="LeftPanel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -37.1304
+margin_top = -23.7864
+margin_right = 36.8696
+margin_bottom = -3.78638
+text = "NOTEPAD"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftPanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -131.5
+margin_top = 16.0953
+margin_right = 132.5
+margin_bottom = 84.0953
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Arrays" type="Button" parent="LeftPanel/VBoxContainer"]
+margin_right = 264.0
+margin_bottom = 14.0
+text = "ARRAYS"
+
+[node name="Vectors" type="Button" parent="LeftPanel/VBoxContainer"]
+margin_top = 18.0
+margin_right = 264.0
+margin_bottom = 32.0
+text = "VECTORS"
+
+[node name="Matrices" type="Button" parent="LeftPanel/VBoxContainer"]
+margin_top = 36.0
+margin_right = 264.0
+margin_bottom = 50.0
+text = "MATRICES"
+
+[node name="Maps" type="Button" parent="LeftPanel/VBoxContainer"]
+margin_top = 54.0
+margin_right = 264.0
+margin_bottom = 68.0
+text = "MAPS"
+
+[node name="Quick Access" type="Label" parent="LeftPanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -46.0
+margin_top = 1.41581
+margin_right = 46.0
+margin_bottom = 15.4158
+text = "QUICK ACCESS"
+align = 1
+valign = 1
+
+[node name="Accelerator" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -44.5
+margin_top = 4.4834
+margin_right = 44.5
+margin_bottom = 18.4834
+text = "ACCELERATOR"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AboutPanel" type="WindowDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -279.5
+margin_top = -206.5
+margin_right = 279.5
+margin_bottom = 206.5
+window_title = "About"
+
+[node name="Version" type="Label" parent="AboutPanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -86.5
+margin_right = 86.5
+margin_bottom = 14.0
+text = "Accelerator Version: 0.0.01"
+
+[node name="HelpPanel" type="WindowDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -279.5
+margin_top = -206.5
+margin_right = 279.5
+margin_bottom = 206.5
+window_title = "Help"
+
+[node name="Version" type="Label" parent="HelpPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "What is Accelerator?
+Accelerator is a software development visualisation tool "
+[connection signal="gui_input" from="MenuBar" to="." method="_on_MenuBar_gui_input"]
+[connection signal="button_down" from="MenuBar/HideMenu" to="." method="_on_HideMenu_button_down"]
+[connection signal="pressed" from="MenuBar/Exit" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="MenuBar/Minimize" to="." method="_on_Minimize_pressed"]
+[connection signal="button_down" from="LeftPanel/NOTEPAD" to="." method="_on_NOTEPAD_button_down"]

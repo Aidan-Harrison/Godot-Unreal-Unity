@@ -1,0 +1,430 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Player/Inventory.gd" type="Script" id=1]
+[ext_resource path="res://Textures/image.psd.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.870588, 0.870588, 0.870588, 1 )
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.145098, 0.145098, 0.145098, 1 )
+corner_detail = 1
+
+[sub_resource type="Theme" id=3]
+
+[node name="Inventory" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 0.749146
+margin_top = -299.0
+margin_right = 388.749
+margin_bottom = 298.0
+color = Color( 0.164706, 0.164706, 0.164706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StashTabs" type="TabContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -188.0
+margin_top = -0.667419
+margin_right = 187.0
+margin_bottom = 589.333
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tab1" type="Tabs" parent="ColorRect/StashTabs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/StashTabs/Tab1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -182.5
+margin_top = -268.707
+margin_right = 1723.5
+margin_bottom = 2850.29
+rect_scale = Vector2( 0.195, 0.175 )
+custom_constants/vseparation = 10
+custom_constants/hseparation = 10
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item1" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_right = 367.0
+margin_bottom = 437.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item2" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 377.0
+margin_right = 744.0
+margin_bottom = 437.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item3" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 754.0
+margin_right = 1121.0
+margin_bottom = 437.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item4" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1131.0
+margin_right = 1498.0
+margin_bottom = 437.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item5" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1508.0
+margin_right = 1875.0
+margin_bottom = 437.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item6" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_top = 447.0
+margin_right = 367.0
+margin_bottom = 884.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item7" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 377.0
+margin_top = 447.0
+margin_right = 744.0
+margin_bottom = 884.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item8" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 754.0
+margin_top = 447.0
+margin_right = 1121.0
+margin_bottom = 884.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item9" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1131.0
+margin_top = 447.0
+margin_right = 1498.0
+margin_bottom = 884.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item10" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1508.0
+margin_top = 447.0
+margin_right = 1875.0
+margin_bottom = 884.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item11" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_top = 894.0
+margin_right = 367.0
+margin_bottom = 1331.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item12" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 377.0
+margin_top = 894.0
+margin_right = 744.0
+margin_bottom = 1331.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item13" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 754.0
+margin_top = 894.0
+margin_right = 1121.0
+margin_bottom = 1331.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item14" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1131.0
+margin_top = 894.0
+margin_right = 1498.0
+margin_bottom = 1331.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item15" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1508.0
+margin_top = 894.0
+margin_right = 1875.0
+margin_bottom = 1331.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item16" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_top = 1341.0
+margin_right = 367.0
+margin_bottom = 1778.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item17" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 377.0
+margin_top = 1341.0
+margin_right = 744.0
+margin_bottom = 1778.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item18" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 754.0
+margin_top = 1341.0
+margin_right = 1121.0
+margin_bottom = 1778.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item19" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1131.0
+margin_top = 1341.0
+margin_right = 1498.0
+margin_bottom = 1778.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item20" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1508.0
+margin_top = 1341.0
+margin_right = 1875.0
+margin_bottom = 1778.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item21" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_top = 1788.0
+margin_right = 367.0
+margin_bottom = 2225.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item22" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 377.0
+margin_top = 1788.0
+margin_right = 744.0
+margin_bottom = 2225.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item23" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 754.0
+margin_top = 1788.0
+margin_right = 1121.0
+margin_bottom = 2225.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item24" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1131.0
+margin_top = 1788.0
+margin_right = 1498.0
+margin_bottom = 2225.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item25" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1508.0
+margin_top = 1788.0
+margin_right = 1875.0
+margin_bottom = 2225.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item26" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_top = 2235.0
+margin_right = 367.0
+margin_bottom = 2672.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item27" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 377.0
+margin_top = 2235.0
+margin_right = 744.0
+margin_bottom = 2672.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item28" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 754.0
+margin_top = 2235.0
+margin_right = 1121.0
+margin_bottom = 2672.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item29" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1131.0
+margin_top = 2235.0
+margin_right = 1498.0
+margin_bottom = 2672.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item30" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1508.0
+margin_top = 2235.0
+margin_right = 1875.0
+margin_bottom = 2672.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item31" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_top = 2682.0
+margin_right = 367.0
+margin_bottom = 3119.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item32" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 377.0
+margin_top = 2682.0
+margin_right = 744.0
+margin_bottom = 3119.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item33" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 754.0
+margin_top = 2682.0
+margin_right = 1121.0
+margin_bottom = 3119.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item34" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1131.0
+margin_top = 2682.0
+margin_right = 1498.0
+margin_bottom = 3119.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Item35" type="Button" parent="ColorRect/StashTabs/Tab1/GridContainer"]
+margin_left = 1508.0
+margin_top = 2682.0
+margin_right = 1875.0
+margin_bottom = 3119.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+
+[node name="Tab2" type="Tabs" parent="ColorRect/StashTabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+theme = SubResource( 3 )
+
+[node name="Tab3" type="Tabs" parent="ColorRect/StashTabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Tab4" type="Tabs" parent="ColorRect/StashTabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Tab5" type="Tabs" parent="ColorRect/StashTabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Tab6" type="Tabs" parent="ColorRect/StashTabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+margin_left = 0.0602572
+margin_top = 596.478
+margin_right = 40.3603
+margin_bottom = 636.478
+rect_scale = Vector2( 9.62618, 2.99603 )
+color = Color( 0.117647, 0.117647, 0.117647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

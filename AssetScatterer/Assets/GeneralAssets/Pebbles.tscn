@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Materials/Stone.tres" type="Material" id=1]
+
+[sub_resource type="SphereMesh" id=1]
+material = ExtResource( 1 )
+radius = 0.6
+height = 0.6
+radial_segments = 5
+rings = 3
+is_hemisphere = true
+
+[sub_resource type="SphereMesh" id=2]
+material = ExtResource( 1 )
+radius = 0.4
+height = 0.4
+radial_segments = 5
+rings = 2
+is_hemisphere = true
+
+[node name="Pebbles" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+visible = false
+cast_shadow = 0
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.929334, 0, 0 )
+cast_shadow = 0
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 0.606544, 0, -0.79505, 0, 1, 0, 0.79505, 0, 0.606544, 0.0298984, 0, -0.862257 )
+cast_shadow = 0
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( -0.389156, 0, -0.921172, 0, 1, 0, 1.2885, 0, -0.544336, -0.919341, 0, 0.244064 )
+cast_shadow = 0
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+transform = Transform( -0.249601, 0, -0.590831, 0, 0.639279, 0, 0.683274, 0, -0.288654, 0.00712244, -0.0296603, 0.918227 )
+cast_shadow = 0
+mesh = SubResource( 2 )
+material/0 = null

@@ -1,0 +1,114 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Notepad.gd" type="Script" id=1]
+[ext_resource path="res://Theme.tres" type="Theme" id=2]
+
+[node name="TextEdit" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -256.0
+margin_top = -256.0
+margin_right = 256.0
+margin_bottom = 256.0
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -255.0
+margin_right = 256.0
+margin_bottom = 22.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FileName" type="Label" parent="Panel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 8.47571
+margin_top = -7.52975
+margin_right = 71.4757
+margin_bottom = 6.47025
+text = "File name"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="Panel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -21.0
+margin_top = -10.5
+margin_bottom = 10.5
+text = "X"
+
+[node name="OpenFile" type="Button" parent="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.817
+margin_top = 0.280609
+margin_right = 0.183105
+margin_bottom = 20.2806
+text = "OPEN FILE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveFile" type="Button" parent="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 0.924622
+margin_right = 107.925
+margin_bottom = 20.0
+text = "SAVE FILE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -255.0
+margin_top = -235.0
+margin_right = 256.0
+margin_bottom = 248.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpenFileDialog" type="FileDialog" parent="."]
+margin_left = 515.9
+margin_top = 50.8577
+margin_right = 1001.9
+margin_bottom = 376.858
+window_title = "Open a File"
+mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveFileDialog" type="FileDialog" parent="."]
+margin_left = 515.9
+margin_top = 50.8577
+margin_right = 1001.9
+margin_bottom = 376.858
+window_title = "SAVE FILE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Panel/OpenFile" to="." method="_on_OpenFile_pressed"]
+[connection signal="pressed" from="Panel/SaveFile" to="." method="_on_SaveFile_pressed"]
+[connection signal="file_selected" from="OpenFileDialog" to="." method="_on_OpenFileDialog_file_selected"]
+[connection signal="file_selected" from="SaveFileDialog" to="." method="_on_SaveFileDialog_file_selected"]

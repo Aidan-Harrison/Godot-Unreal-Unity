@@ -1,0 +1,16 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://Textures/SeaWeed.png" type="Texture" id=1]
+
+[resource]
+flags_transparent = true
+albedo_color = Color( 0.101961, 0.662745, 0.905882, 1 )
+albedo_texture = ExtResource( 1 )
+metallic_specular = 1.0
+roughness = 0.0
+emission_enabled = true
+emission = Color( 0.352941, 0.886275, 0.898039, 1 )
+emission_energy = 0.5
+emission_operator = 0
+emission_on_uv2 = false
+emission_texture = ExtResource( 1 )

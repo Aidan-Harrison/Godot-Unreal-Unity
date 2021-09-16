@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="PlaneMesh" id=1]
+
+[node name="Particles" type="Particles"]
+cast_shadow = 0
+draw_pass_1 = SubResource( 1 )

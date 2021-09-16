@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "96+le1byzna0Nx2zwc5Ldo4CL0qI9EHEUQKThKWXQzTbvOlYjOOKhvwpEuBnfqci3CSRRQ13tRPAvokoqsv0oA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aid25\\Documents\\GoDot\\ARPG\\ARPG.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aid25\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\aid25\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.0\\microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

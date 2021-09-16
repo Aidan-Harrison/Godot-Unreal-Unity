@@ -1,0 +1,181 @@
+[gd_scene format=2]
+
+[node name="StatScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -225.0
+margin_top = -225.0
+margin_right = 225.0
+margin_bottom = 21.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharacterName" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -58.0
+margin_right = 58.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "CHARACTER NAME"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatNames" type="VBoxContainer" parent="ColorRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -63.5
+margin_right = 162.0
+margin_bottom = 63.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health" type="Label" parent="ColorRect/StatNames"]
+margin_right = 162.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "HEALTH"
+align = 1
+valign = 1
+
+[node name="Shield" type="Label" parent="ColorRect/StatNames"]
+margin_top = 18.0
+margin_right = 162.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SHIELD"
+align = 1
+valign = 1
+
+[node name="Mana" type="Label" parent="ColorRect/StatNames"]
+margin_top = 36.0
+margin_right = 162.0
+margin_bottom = 50.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MANA"
+align = 1
+valign = 1
+
+[node name="Armor" type="Label" parent="ColorRect/StatNames"]
+margin_top = 54.0
+margin_right = 162.0
+margin_bottom = 68.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ARMOR"
+align = 1
+valign = 1
+
+[node name="FireRes" type="Label" parent="ColorRect/StatNames"]
+margin_top = 72.0
+margin_right = 162.0
+margin_bottom = 86.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "FIRE RESISTANCE"
+align = 1
+valign = 1
+
+[node name="ColdRes" type="Label" parent="ColorRect/StatNames"]
+margin_top = 90.0
+margin_right = 162.0
+margin_bottom = 104.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "COLD RESISTANCE"
+align = 1
+valign = 1
+
+[node name="LightningRes" type="Label" parent="ColorRect/StatNames"]
+margin_top = 108.0
+margin_right = 162.0
+margin_bottom = 122.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LIGHTNING RESISTANCE"
+align = 1
+valign = 1
+
+[node name="Values" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -269.0
+margin_top = -66.5
+margin_bottom = 66.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="healthValue" type="Label" parent="ColorRect/Values"]
+margin_right = 269.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "000"
+align = 1
+valign = 1
+
+[node name="shieldValue" type="Label" parent="ColorRect/Values"]
+margin_top = 18.0
+margin_right = 269.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "000"
+align = 1
+valign = 1
+
+[node name="manaValue" type="Label" parent="ColorRect/Values"]
+margin_top = 36.0
+margin_right = 269.0
+margin_bottom = 50.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "000"
+align = 1
+valign = 1
+
+[node name="armorValue" type="Label" parent="ColorRect/Values"]
+margin_top = 54.0
+margin_right = 269.0
+margin_bottom = 68.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "%000"
+align = 1
+valign = 1
+
+[node name="fResValue" type="Label" parent="ColorRect/Values"]
+margin_top = 72.0
+margin_right = 269.0
+margin_bottom = 86.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "%000"
+align = 1
+valign = 1
+
+[node name="cResValue" type="Label" parent="ColorRect/Values"]
+margin_top = 90.0
+margin_right = 269.0
+margin_bottom = 104.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "%000"
+align = 1
+valign = 1
+
+[node name="lResValue" type="Label" parent="ColorRect/Values"]
+margin_top = 108.0
+margin_right = 269.0
+margin_bottom = 122.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "%000"
+align = 1
+valign = 1

@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Materials/MushroomCap.tres" type="Material" id=1]
+
+[sub_resource type="SphereMesh" id=1]
+material = ExtResource( 1 )
+radius = 0.8
+height = 0.3
+radial_segments = 8
+rings = 4
+is_hemisphere = true
+
+[sub_resource type="CylinderMesh" id=2]
+top_radius = 0.1
+bottom_radius = 0.25
+radial_segments = 6
+rings = 1
+
+[sub_resource type="SphereMesh" id=3]
+material = ExtResource( 1 )
+radius = 0.4
+height = 0.3
+radial_segments = 7
+rings = 1
+is_hemisphere = true
+
+[node name="GiantMushroom" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.92281, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.960631, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( 0.481482, 0, 0, 0, 0.23692, -0.343205, 0, 0.377447, 0.529346, 0.000664234, -0.855228, 0.476488 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.736081, 0.728588 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.352641, 0 )
+light_color = Color( 0.921569, 0.121569, 0.34902, 1 )
+light_energy = 1.25
+light_specular = 1.0
