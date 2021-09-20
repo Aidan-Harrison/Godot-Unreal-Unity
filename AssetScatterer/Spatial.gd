@@ -8,4 +8,4 @@ extends Spatial
 		#set_process(true)
 
 func _process(delta):
-	rotate_y(0.2 * delta)
+	rotate_y(0.4 * delta)

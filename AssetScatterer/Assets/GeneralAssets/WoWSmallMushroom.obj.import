@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/WoWSmallMushroom.obj-86a88c3597cecdac9e98da1f23cbe62f.mesh"
+
+[deps]
+
+files=[ "res://.import/WoWSmallMushroom.obj-86a88c3597cecdac9e98da1f23cbe62f.mesh" ]
+
+source_file="res://Assets/GeneralAssets/WoWSmallMushroom.obj"
+dest_files=[ "res://.import/WoWSmallMushroom.obj-86a88c3597cecdac9e98da1f23cbe62f.mesh", "res://.import/WoWSmallMushroom.obj-86a88c3597cecdac9e98da1f23cbe62f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

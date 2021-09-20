@@ -28,5 +28,5 @@ transmission = Color( 0.380392, 0.698039, 0.705882, 1 )
 refraction_enabled = true
 refraction_scale = 0.05
 refraction_texture_channel = 0
-uv1_scale = Vector3( 1.5, 1.5, 1.5 )
+uv1_scale = Vector3( 6, 6, 6 )
 uv1_offset = Vector3( 0.38222, 0.38222, 0 )

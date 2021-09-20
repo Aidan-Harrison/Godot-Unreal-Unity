@@ -4,5 +4,5 @@
 
 [resource]
 flags_transparent = true
-albedo_color = Color( 0.858824, 0.913725, 0.192157, 1 )
+albedo_color = Color( 0.913725, 0.396078, 0.192157, 1 )
 albedo_texture = ExtResource( 1 )

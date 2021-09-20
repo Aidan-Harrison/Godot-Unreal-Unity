@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Farm.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World.gd" type="Script" id=3]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 531.779, 252.397 )
+
+[node name="TimeOfDay" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="Farm" parent="." instance=ExtResource( 2 )]
+
+[connection signal="timeout" from="TimeOfDay" to="." method="_on_TimeOfDay_timeout"]

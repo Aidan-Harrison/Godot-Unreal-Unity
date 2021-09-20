@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/WoWGrassClump.obj-da8df51c666c5ab47741f0f9d1f9d442.mesh"
+
+[deps]
+
+files=[ "res://.import/WoWGrassClump.obj-da8df51c666c5ab47741f0f9d1f9d442.mesh" ]
+
+source_file="res://Assets/GeneralAssets/WoWGrassClump.obj"
+dest_files=[ "res://.import/WoWGrassClump.obj-da8df51c666c5ab47741f0f9d1f9d442.mesh", "res://.import/WoWGrassClump.obj-da8df51c666c5ab47741f0f9d1f9d442.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 2, 2, 2 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

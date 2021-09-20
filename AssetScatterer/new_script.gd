@@ -20,8 +20,8 @@ func _ready():
 	
 	var mesh = PlaneMesh.new()
 	mesh.size = Vector2(50, 50) # Original = 20, 20
-	mesh.subdivide_depth = 30
-	mesh.subdivide_width = 30
+	mesh.subdivide_depth = 25
+	mesh.subdivide_width = 25
 	
 	var surface = SurfaceTool.new()
 	surface.create_from(mesh, 0)
@@ -65,3 +65,6 @@ func _ready():
 #	self.zPos = z
 #	self.noise = noise
 #	self.chunkDimensions = chunkSize
+
+func _on_Water_waterLevel(level):
+	$Scatterer.waterLevel = level

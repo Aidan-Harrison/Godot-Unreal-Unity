@@ -1,0 +1,428 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Textures/WoWGear.png" type="Texture" id=1]
+[ext_resource path="res://Textures/image.psd.png" type="Texture" id=2]
+[ext_resource path="res://GearScreen.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.223529, 0.137255, 0.0470588, 1 )
+corner_detail = 1
+
+[node name="GearScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 523.0
+margin_bottom = 600.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot1" type="ColorRect" parent="."]
+margin_left = 1.0
+margin_top = 70.0
+margin_right = 96.0
+margin_bottom = 165.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Slot1"]
+margin_left = 3.5
+margin_top = 4.0
+margin_right = 91.5
+margin_bottom = 92.0
+icon = ExtResource( 2 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot2" type="ColorRect" parent="."]
+margin_left = 1.0
+margin_top = 165.459
+margin_right = 96.0
+margin_bottom = 260.459
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Slot2"]
+margin_left = 3.5
+margin_top = 1.04057
+margin_right = 91.5
+margin_bottom = 89.0406
+icon = ExtResource( 2 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot3" type="ColorRect" parent="."]
+margin_left = 1.16534
+margin_top = 257.797
+margin_right = 96.1653
+margin_bottom = 352.797
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="Slot3"]
+margin_left = 3.70966
+margin_top = 1.82794
+margin_right = 91.7097
+margin_bottom = 89.8279
+icon = ExtResource( 2 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot4" type="ColorRect" parent="."]
+margin_left = 0.811798
+margin_top = 350.782
+margin_right = 95.8118
+margin_bottom = 445.782
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="Slot4"]
+margin_left = 3.92633
+margin_top = 2.37561
+margin_right = 91.9263
+margin_bottom = 90.3756
+icon = ExtResource( 2 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot5" type="ColorRect" parent="."]
+margin_left = 1.34213
+margin_top = 443.589
+margin_right = 96.3421
+margin_bottom = 538.589
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="Slot5"]
+margin_left = 3.88329
+margin_top = 2.53845
+margin_right = 91.8833
+margin_bottom = 90.5385
+icon = ExtResource( 2 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot6" type="ColorRect" parent="."]
+margin_left = 426.442
+margin_top = 70.7095
+margin_right = 521.442
+margin_bottom = 165.71
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6" type="Button" parent="Slot6"]
+margin_left = 3.07092
+margin_top = 3.91476
+margin_right = 91.071
+margin_bottom = 91.9148
+icon = ExtResource( 2 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot7" type="ColorRect" parent="."]
+margin_left = 426.442
+margin_top = 166.169
+margin_right = 521.442
+margin_bottom = 261.169
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button7" type="Button" parent="Slot7"]
+margin_left = 3.07092
+margin_top = 0.955338
+margin_right = 91.071
+margin_bottom = 88.9553
+icon = ExtResource( 2 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot8" type="ColorRect" parent="."]
+margin_left = 426.135
+margin_top = 258.625
+margin_right = 521.135
+margin_bottom = 353.625
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button8" type="Button" parent="Slot8"]
+margin_left = 3.28058
+margin_top = 1.74271
+margin_right = 91.2806
+margin_bottom = 89.7427
+icon = ExtResource( 2 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot9" type="ColorRect" parent="."]
+margin_left = 426.253
+margin_top = 351.491
+margin_right = 521.253
+margin_bottom = 446.491
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button9" type="Button" parent="Slot9"]
+margin_left = 3.49731
+margin_top = 2.29037
+margin_right = 91.4973
+margin_bottom = 90.2904
+icon = ExtResource( 2 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot10" type="ColorRect" parent="."]
+margin_left = 425.9
+margin_top = 444.476
+margin_right = 520.9
+margin_bottom = 539.476
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button10" type="Button" parent="Slot10"]
+margin_left = 4.33807
+margin_top = 2.27643
+margin_right = 92.338
+margin_bottom = 90.2764
+icon = ExtResource( 2 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 523.0
+margin_right = 1025.0
+margin_bottom = 600.0
+color = Color( 0.227451, 0.2, 0.156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -59.5979
+margin_top = 21.9203
+margin_right = -19.5979
+margin_bottom = 35.9203
+rect_scale = Vector2( 3, 3 )
+custom_styles/normal = SubResource( 1 )
+text = "STATS"
+align = 1
+valign = 1
+
+[node name="StatNames" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -239.0
+margin_top = -218.0
+margin_bottom = 228.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stamina" type="Label" parent="ColorRect/StatNames"]
+margin_right = 239.0
+margin_bottom = 14.0
+text = "Stamina:"
+
+[node name="Strength" type="Label" parent="ColorRect/StatNames"]
+margin_top = 18.0
+margin_right = 239.0
+margin_bottom = 32.0
+text = "Strength:"
+
+[node name="Agility" type="Label" parent="ColorRect/StatNames"]
+margin_top = 36.0
+margin_right = 239.0
+margin_bottom = 50.0
+text = "Agility:"
+
+[node name="Intellect" type="Label" parent="ColorRect/StatNames"]
+margin_top = 54.0
+margin_right = 239.0
+margin_bottom = 68.0
+text = "Intellect:"
+
+[node name="CriticalStrike" type="Label" parent="ColorRect/StatNames"]
+margin_top = 72.0
+margin_right = 239.0
+margin_bottom = 86.0
+text = "Critical Strike:"
+
+[node name="Haste" type="Label" parent="ColorRect/StatNames"]
+margin_top = 90.0
+margin_right = 239.0
+margin_bottom = 104.0
+text = "Haste:"
+
+[node name="Mastery" type="Label" parent="ColorRect/StatNames"]
+margin_top = 108.0
+margin_right = 239.0
+margin_bottom = 122.0
+text = "Mastery:"
+
+[node name="Versatility" type="Label" parent="ColorRect/StatNames"]
+margin_top = 126.0
+margin_right = 239.0
+margin_bottom = 140.0
+text = "Versatility:"
+
+[node name="Avoidance" type="Label" parent="ColorRect/StatNames"]
+margin_top = 144.0
+margin_right = 239.0
+margin_bottom = 158.0
+text = "Avoidance:"
+
+[node name="Indestructible" type="Label" parent="ColorRect/StatNames"]
+margin_top = 162.0
+margin_right = 239.0
+margin_bottom = 176.0
+text = "Indestructible:"
+
+[node name="Leech" type="Label" parent="ColorRect/StatNames"]
+margin_top = 180.0
+margin_right = 239.0
+margin_bottom = 194.0
+text = "Leech:"
+
+[node name="Speed" type="Label" parent="ColorRect/StatNames"]
+margin_top = 198.0
+margin_right = 239.0
+margin_bottom = 212.0
+text = "Speed:"
+
+[node name="StatValues" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 4.66602
+margin_top = -221.969
+margin_right = 243.666
+margin_bottom = 224.031
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaminaVal" type="Label" parent="ColorRect/StatValues"]
+margin_right = 239.0
+margin_bottom = 14.0
+text = "000"
+
+[node name="StrengthVal" type="Label" parent="ColorRect/StatValues"]
+margin_top = 18.0
+margin_right = 239.0
+margin_bottom = 32.0
+text = "000"
+
+[node name="AgilityVal" type="Label" parent="ColorRect/StatValues"]
+margin_top = 36.0
+margin_right = 239.0
+margin_bottom = 50.0
+text = "000"
+
+[node name="IntellectVal" type="Label" parent="ColorRect/StatValues"]
+margin_top = 54.0
+margin_right = 239.0
+margin_bottom = 68.0
+text = "000"
+
+[node name="CriticalStrikeVal" type="Label" parent="ColorRect/StatValues"]
+margin_top = 72.0
+margin_right = 239.0
+margin_bottom = 86.0
+text = "000"
+
+[node name="HasteVal" type="Label" parent="ColorRect/StatValues"]
+margin_top = 90.0
+margin_right = 239.0
+margin_bottom = 104.0
+text = "000"
+
+[node name="MasteryVal" type="Label" parent="ColorRect/StatValues"]
+margin_top = 108.0
+margin_right = 239.0
+margin_bottom = 122.0
+text = "000"
+
+[node name="VersatilityVal" type="Label" parent="ColorRect/StatValues"]
+margin_top = 126.0
+margin_right = 239.0
+margin_bottom = 140.0
+text = "000"
+
+[node name="AvoidanceVal" type="Label" parent="ColorRect/StatValues"]
+margin_top = 144.0
+margin_right = 239.0
+margin_bottom = 158.0
+text = "000"
+
+[node name="IndestructibleVal" type="Label" parent="ColorRect/StatValues"]
+margin_top = 162.0
+margin_right = 239.0
+margin_bottom = 176.0
+text = "000"
+
+[node name="LeechVal" type="Label" parent="ColorRect/StatValues"]
+margin_top = 180.0
+margin_right = 239.0
+margin_bottom = 194.0
+text = "000"
+
+[node name="SpeedVal" type="Label" parent="ColorRect/StatValues"]
+margin_top = 198.0
+margin_right = 239.0
+margin_bottom = 212.0
+text = "000"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 89.5555
+margin_top = 20.1815
+margin_right = 205.555
+margin_bottom = 34.1815
+rect_scale = Vector2( 3, 3 )
+custom_styles/normal = SubResource( 1 )
+text = "CHARACTER NAME"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="Slot1/Button" to="." method="_on_Button_pressed"]

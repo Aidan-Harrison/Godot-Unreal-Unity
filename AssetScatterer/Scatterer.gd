@@ -56,12 +56,28 @@ var isLog = false
 var isGrass = false
 var isBush = false
 
+var isMegaAsset = false
+
 var newAsset
 var choice = 0
+
+var hasTree = true
+var hasGrass = true
+
+var multiMeshCounter : int = 0
+var treeCounter : int = 0
+var grassCounter : int = 0
 
 var biome : int = 0
 
 var thread
+
+var generator = RandomNumberGenerator.new()
+
+# Mega assets
+# Node - to - Node connections
+# Camera/Player bounds optimisations
+# poly optimisation
 
 func _ready(): # Add biome gen function instead
 	# Models
@@ -98,24 +114,25 @@ func _input(_event):
 		#$MoveTimer.start()
 	if Input.is_action_just_pressed("Reset"):
 		get_tree().change_scene("res://World.tscn")
+	multiMeshCounter = 0
 		
 func _process(delta):
 	$WaterCast.rotate_y(2 * delta)
 	$WaterDir.rotate_y(2 * delta)
 	$MeshInstance.rotate_y(2 * delta)
 
-#func _on_MoveTimer_timeout():
-func _physics_process(delta):
+# func _physics_process(delta):
+func TEMPFUNC():
 	$WaterCast.global_transform.origin = $RayCast.get_collision_point()
 	$WaterCast.global_transform.origin.y += 0.2
 	$MeshInstance.global_transform.origin = $RayCast.get_collision_point()
 	$MeshInstance.global_transform.origin.y += 0.2
-	translation.x += 0.3
-	if translation.x > 25:
-		translation.z += 0.3
-		translation.x = -25
-	if translation.z > 25:
-		set_physics_process(false)
+	$RayCast.translation.x += 1.5
+	if $RayCast.translation.x > 25:
+		$RayCast.translation.z += 1.5
+		$RayCast.translation.x = -25
+	if $RayCast.translation.z > 25:
+		$MoveTimer.stop()
 	var genChoice = rand_range(0, 10)
 	if biome == 1:
 		if genChoice > 6:
@@ -174,9 +191,15 @@ func _physics_process(delta):
 				newAsset.set_as_toplevel(true)
 				$RayCast.add_child(newAsset) # Change to terrain?
 				newAsset.global_transform.origin = $RayCast.get_collision_point()
+				#$TreeMultiMesh.multimesh.set_instance_transform(multiMeshCounter, Transform(Basis(), $RayCast.get_collision_point()))
+				$GrassMultiMesh.multimesh.set_instance_transform(multiMeshCounter, Transform(Basis(), $RayCast.get_collision_point()))
+				multiMeshCounter += 1
+				if multiMeshCounter >= 500:
+					$MoveTimer.stop()
 				if !isShore || !isWater || !isBush:
-					if newAsset.name != "SmallMushroom" || newAsset.name != "GiantMushroom" || newAsset.name != "LargeBush":
-						newAsset.look_at($RayCast.get_collision_point() + $RayCast.get_collision_normal(), Vector3.UP)
+					pass
+					#if newAsset.name != "SmallMushroom" || newAsset.name != "GiantMushroom" || newAsset.name != "LargeBush":
+						#newAsset.look_at($RayCast.get_collision_point() + $RayCast.get_collision_normal(), Vector3.UP)
 				# If angle of object is too great, swap for appropiate asset
 				if newAsset.rotation.x > 15 || newAsset.rotation.x < -15 || newAsset.rotation.z > 15 || newAsset.rotation.z < -15: # Fix! | Too steep
 					pass
@@ -185,8 +208,8 @@ func _physics_process(delta):
 				if !isTree || isWater || isBush || newAsset.name != "LargeBush":
 					choice = rand_range(0.4, 0.8)
 					newAsset.scale = Vector3(choice,choice,choice)
-				if newAsset.global_transform.origin.y > 6:
-					pass
+				#if newAsset.global_transform.origin.y > 6:
+					#pass
 				newAsset.rotation.y = rand_range(0, 360)
 				isShore = false
 				isTree = false
@@ -264,6 +287,38 @@ func _physics_process(delta):
 			newAsset.set_as_toplevel(true)
 			$RayCast.add_child(newAsset)
 			newAsset.global_transform.origin = $RayCast.get_collision_point()
+			
+#func TEMPFUNC():
+func _on_MoveTimer_timeout():
+	$RayCast.translation.x += 1
+	if $RayCast.translation.x > 25:
+		$RayCast.translation.z += 1.35
+		$RayCast.translation.x = -25
+	if $RayCast.translation.z > 25:
+		$MoveTimer.stop()
+	var choice = rand_range(0, 1)
+	if choice > 0.35:
+		var transform = Transform()
+		transform = transform.rotated(Vector3.UP,rand_range(0, 180))
+		transform.origin = Vector3($RayCast.get_collision_point())
+		choice = rand_range(0, 1)
+		if choice > 0.98 && hasTree:
+			$TreeMultiMesh.multimesh.set_instance_transform(treeCounter, transform)
+			treeCounter += 1
+		elif choice < 0.98 && hasGrass:
+			$GrassMultiMesh.multimesh.set_instance_transform(grassCounter, transform)
+			grassCounter += 1
+		if treeCounter >= $TreeMultiMesh.multimesh.get_instance_count():
+			hasTree = false
+		if grassCounter >= $GrassMultiMesh.multimesh.get_instance_count():
+			hasGrass = false
+	if choice > 0.9: # Standard asset generation
+		choice = generator.randi_range(5, 8)
+		var newAsset = assets[choice].instance()
+		newAsset.set_as_toplevel(true)
+		add_child(newAsset)
+		newAsset.global_transform.origin = $RayCast.get_collision_point()
+		newAsset.rotation.y = rand_range(0, 360)
 
 func _on_Water_waterLevel(level):
 	waterLevel = level
@@ -273,4 +328,3 @@ func _on_TerrainChunk_biome(ID):
 		biome = 0
 	else:
 		biome = 1
-	print(biome)
