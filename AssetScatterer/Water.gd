@@ -7,7 +7,7 @@ signal waterLevel(level)
 
 func _ready():
 	randomize()
-	var height = rand_range(-1, 0.3)
+	var height = rand_range(-1, 0.15)
 	translation.y = height
 	emit_signal("waterLevel", translation.y + 0.5) # Return to this!
 	$AnimationPlayer.play("Main")

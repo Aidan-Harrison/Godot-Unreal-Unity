@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/trollmale_hd.obj-eed52a01ae78564c048172f423fe9a44.mesh"
+
+[deps]
+
+files=[ "res://.import/trollmale_hd.obj-eed52a01ae78564c048172f423fe9a44.mesh" ]
+
+source_file="res://Player/trollmale_hd.obj"
+dest_files=[ "res://.import/trollmale_hd.obj-eed52a01ae78564c048172f423fe9a44.mesh", "res://.import/trollmale_hd.obj-eed52a01ae78564c048172f423fe9a44.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 0.75, 0.75, 0.75 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

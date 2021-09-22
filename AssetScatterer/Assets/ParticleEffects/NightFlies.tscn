@@ -2,19 +2,19 @@
 
 [ext_resource path="res://Materials/NightElfMaterials/NightFliesMat.tres" type="Material" id=1]
 
-[sub_resource type="Curve" id=3]
+[sub_resource type="Curve" id=1]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.245161, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=4]
-curve = SubResource( 3 )
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
 
-[sub_resource type="ParticlesMaterial" id=1]
+[sub_resource type="ParticlesMaterial" id=3]
 emission_shape = 1
 emission_sphere_radius = 5.0
 gravity = Vector3( 0, 0, 0 )
-scale_curve = SubResource( 4 )
+scale_curve = SubResource( 2 )
 
-[sub_resource type="SphereMesh" id=2]
+[sub_resource type="SphereMesh" id=4]
 material = ExtResource( 1 )
 radius = 0.05
 height = 0.05
@@ -25,5 +25,5 @@ rings = 1
 cast_shadow = 0
 amount = 80
 speed_scale = 0.5
-process_material = SubResource( 1 )
-draw_pass_1 = SubResource( 2 )
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 4 )

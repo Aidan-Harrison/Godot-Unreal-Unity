@@ -1,10 +1,10 @@
 [gd_resource type="SpatialMaterial" load_steps=2 format=2]
 
-[ext_resource path="res://Textures/Grass.png" type="Texture" id=1]
+[ext_resource path="res://Textures/8du_goldcity_grass.png" type="Texture" id=1]
 
 [resource]
-albedo_color = Color( 0.537255, 0.160784, 0.913725, 1 )
+params_diffuse_mode = 1
+albedo_color = Color( 0.94902, 0.501961, 1, 1 )
 albedo_texture = ExtResource( 1 )
-roughness = 0.8
-uv1_scale = Vector3( 0.3, 0.3, 0.3 )
+metallic_specular = 0.2
 uv1_triplanar = true

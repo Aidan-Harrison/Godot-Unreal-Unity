@@ -1,10 +1,9 @@
 [gd_resource type="SpatialMaterial" load_steps=2 format=2]
 
-[ext_resource path="res://Textures/Grass.png" type="Texture" id=1]
+[ext_resource path="res://Textures/7sr_grass01_512.png" type="Texture" id=1]
 
 [resource]
-albedo_color = Color( 0.690196, 0.905882, 0.0901961, 1 )
+albedo_color = Color( 0.921569, 0.729412, 1, 1 )
 albedo_texture = ExtResource( 1 )
 roughness = 0.8
-uv1_scale = Vector3( 0.3, 0.3, 0.3 )
 uv1_triplanar = true

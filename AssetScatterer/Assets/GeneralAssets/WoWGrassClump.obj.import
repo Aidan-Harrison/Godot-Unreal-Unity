@@ -14,6 +14,6 @@ dest_files=[ "res://.import/WoWGrassClump.obj-da8df51c666c5ab47741f0f9d1f9d442.m
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 2, 2, 2 )
+scale_mesh=Vector3( 5, 5, 5 )
 offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

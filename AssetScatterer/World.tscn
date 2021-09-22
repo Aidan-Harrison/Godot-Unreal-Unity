@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Spatial.gd" type="Script" id=2]
 [ext_resource path="res://DirectionalLight.gd" type="Script" id=3]
 [ext_resource path="res://Water.tscn" type="PackedScene" id=4]
-[ext_resource path="res://TerrainChunk.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scatterer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Textures/WoWSkybox2.jpg" type="Texture" id=6]
 [ext_resource path="res://WorldEnvironment.gd" type="Script" id=7]
 [ext_resource path="res://World.gd" type="Script" id=8]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=9]
 
 [sub_resource type="PanoramaSky" id=1]
 panorama = ExtResource( 6 )
@@ -16,8 +17,10 @@ panorama = ExtResource( 6 )
 background_mode = 2
 background_sky = SubResource( 1 )
 ambient_light_color = Color( 0.215686, 0.537255, 0.752941, 1 )
+fog_enabled = true
 fog_color = Color( 0.796078, 0.172549, 0.886275, 1 )
 fog_sun_color = Color( 0.231373, 0.745098, 0.901961, 1 )
+tonemap_mode = 2
 ss_reflections_enabled = true
 ss_reflections_max_steps = 32
 ssao_enabled = true
@@ -25,8 +28,12 @@ ssao_radius = 3.0
 ssao_intensity = 2.0
 ssao_quality = 0
 glow_enabled = true
+glow_intensity = 1.0
+glow_bloom = 0.05
+glow_blend_mode = 0
 
 [node name="World" type="StaticBody"]
+input_ray_pickable = false
 script = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
@@ -40,25 +47,29 @@ directional_shadow_mode = 0
 script = ExtResource( 3 )
 
 [node name="Spatial" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 50 )
+visible = false
 script = ExtResource( 2 )
 
 [node name="Camera" type="Camera" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 15, 45 )
+transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 50, 50 )
 fov = 75.0
-far = 200.0
+far = 1000.0
 
 [node name="Water" parent="." groups=[
 "Water",
 ] instance=ExtResource( 4 )]
-transform = Transform( 25, 0, 0, 0, 1, 0, 0, 0, 25, 0, 0, 0 )
-visible = false
+transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 50, 0, 50 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
 script = ExtResource( 7 )
 
-[node name="TerrainChunk" parent="." instance=ExtResource( 5 )]
-
 [node name="Control" parent="." instance=ExtResource( 1 )]
 
-[connection signal="waterLevel" from="Water" to="TerrainChunk" method="_on_Water_waterLevel"]
+[node name="Scatterer" parent="." instance=ExtResource( 5 )]
+
+[node name="Player" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.10048, 20.4346, 30.1937 )
+
+[connection signal="waterLevel" from="Water" to="Scatterer" method="_on_Water_waterLevel"]

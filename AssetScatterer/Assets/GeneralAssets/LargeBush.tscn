@@ -4,7 +4,7 @@
 [ext_resource path="res://Materials/Leaf.tres" type="Material" id=2]
 
 [node name="LargeBush" type="MeshInstance"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
+transform = Transform( 1.5, 0, 0, 0, 3, 0, 0, 0, 2, 0, 0, 0 )
 cast_shadow = 0
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )
